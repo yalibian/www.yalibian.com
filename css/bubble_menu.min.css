@@ -1,0 +1,1 @@
+#mainBubble{background:#fff;border:solid 1px #ddd;box-shadow:0 0 4px rgba(0,0,0,0);font:10px sans-serif;height:300px;position:relative;width:100%}#mainBubble svg{position:absolute;top:0}#mainBubble circle.topBubble{fill:#aaa;stroke:#666;stroke-width:1.5px}#bubbleItemNode{font:12px sans-serif;position:center}

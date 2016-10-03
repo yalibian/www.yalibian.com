@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <title>Intro · Visulization of Topics</title>
+    <link rel="stylesheet" href="./intro/css/default.css">
+    <link href="./intro/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./intro/css/docs.min.css" rel="stylesheet">
+    <link href="./intro/css/upload.min.css" rel="stylesheet">
+</head>
+
+
+<body class="bs-docs-home">
+
+<div id="vis-create">
+    <div class="container">
+        <h1 class="bs-docs-featurette-title" id="vis-title">Topics Visualizer</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <hr class="masthead-hr">
+
+        <div class="row bs-docs-featured-sites">
+
+            <div class="col-xs-12 col-sm-12" id="vis-demo">
+                <a href="index.html" target="_blank" title="demo">
+                    <img src="./intro/img/complete.png" alt="Topic" class="img-responsive">
+                </a>
+                <br/>
+                <!--<hr class="half-rule">-->
+                <a href="index.html" class="btn btn-outline btn-lg">Demo</a>
+                <button class="btn btn-outline btn-lg" id="create-vis-1" onclick="popUpload_1()">create</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="upload" id="upload-1" style="display: none;">
+        <iframe src="upload.html" width="960" height="500"></iframe>
+    </div>
+</div>
+
+<br>
+<hr class="masthead-hr">
+
+<div class="bs-docs-featurette" id="vis-data">
+    <!--<div class="" id="vis-data">-->
+    <div class="container" id="data-exp">
+        <h2 class="bs-docs-featurette-title">数据范例</h2>
+        <p class="lead">为提供完整的可视化系统服务，需要提供JSON文件，如下：<br/>
+        </p>
+
+        <!--<hr class="half-rule">-->
+
+        <div class="row">
+            <div class="col-sm-3">
+                <!--<img src="./Bootstrap_files/sass-less.png" alt="Sass and Less support" class="img-responsive">-->
+
+                <h3>Article.json</h3>
+
+                <p>文本的元数据信息，<a href="./intro/data/article.json">下载Demo</a></p>
+                <hr class="half-rule">
+
+
+                <pre>
+<code class="json hljs">
+    {
+    "article-ID": {
+    "abstract" : "strings",
+    "authors" : "string",
+    "id" : "string",
+    "keywords": "string"
+    "title" : "string"
+    },
+    ...
+
+    }</code></pre>
+
+            </div>
+
+            <div class="col-sm-3">
+                <h3>Topic.json</h3>
+                <p>文本主题topic信息，<a href="./intro/data/topic.json">下载Demo</a></p>
+                <hr class="half-rule">
+<pre><code class="json hljs">
+    {
+    "id" : {
+    "data" : "string",
+    "wordlist" : {
+    "word" : number,
+    ...
+    },
+    "weight" : number
+    },
+    ...
+    }
+</code></pre>
+            </div>
+
+            <div class="col-sm-3">
+                <h3>Category.json</h3>
+                <p>Paper对应信息,<a href="./intro/data/topic.json">下载Demo</a></p>
+                <hr class="half-rule">
+<pre><code class="json hljs">
+    {
+    {
+    "id": "string"
+    },
+    {
+    "id": "string"
+    },
+    ...
+
+    }
+
+</code></pre>
+            </div>
+
+            <div class="col-sm-3">
+                <h3>Topic-Category.json</h3>
+                <p> 主题与category 关系,<a href="./intro/data/article.json">下载Demo</a></p>
+
+                <hr class="half-rule">
+<pre><code class="json hljs">
+    {
+    "5": {
+    "date": 2013,
+    "wordlist": {
+    "comment": 0.07,
+    "useful": 0.037,
+    ...
+    },
+    "weight": 0.208
+    }
+    }
+</code></pre>
+
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</div>
+
+
+</body>
+<script src="scripts/lib/jquery-1.9.1.min.js"></script>
+<script src="./intro/js/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+<!--<script src="./intro/js/create_vis.js"></script>-->
+<script src="./intro/js/main.min.js"></script>
+</html>
