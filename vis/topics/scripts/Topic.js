@@ -9,7 +9,7 @@ function Topic(id, topic2doc, wordlist, weight, periods) {
 
 
 // populate data into periods
-Topic.prototype.populatePeriods = function(periods) {	
+Topic.prototype.populatePeriods = function (periods) {
 	//console.log("In Topic.populatePeriods")
 	for (var i in periods) {
 		var tmp = new Period();
@@ -28,7 +28,7 @@ Topic.prototype.populatePeriods = function(periods) {
 };
 
 
-Topic.prototype.wrap = function(topic) {
+Topic.prototype.wrap = function (topic) {
 	//console.log("In topic.wrap()")
 	this.id = topic.id;
 	this.topic2doc = topic.topic2doc;
@@ -39,31 +39,33 @@ Topic.prototype.wrap = function(topic) {
 	this.populatePeriods(topic.periods);
 };
 
-Topic.prototype.getHTMLSummary = function() {
+Topic.prototype.getHTMLSummary = function () {
 	var sum = 0;
 	var count = 0;
-	$.each(this.wordlist, function(word, value) {
+	$.each(this.wordlist, function (word, value) {
 		count = count + 1;
 		sum = sum + value;
 	});
-	var mean = sum/count;
+	var mean = sum / count;
 	
 	var sortable = []
 	for (var word in this.wordlist) {
 		sortable.push([word, this.wordlist[word]])
 	}
-	sortable.sort(function(a,b) {return b[1]-a[1]});
+	sortable.sort(function (a, b) {
+		return b[1] - a[1]
+	});
 	
 	var s = "";
 	var highest = sortable[0][1];
 	for (var pair in sortable) {
-		w = "<span style=\"font-size: " + (sortable[pair][1]/mean)*100 + "%\">" + sortable[pair][0] + "</span>"
+		w = "<span style=\"font-size: " + (sortable[pair][1] / mean) * 100 + "%\">" + sortable[pair][0] + "</span>"
 		s = s + w + ", ";
 	}
-	return s.slice(0,-2);
+	return s.slice(0, -2);
 };
 
-Topic.prototype.getWordlist = function() {
+Topic.prototype.getWordlist = function () {
 	return this.wordlist;
 };
 

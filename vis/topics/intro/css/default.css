@@ -9,7 +9,6 @@ body {
     background-repeat: repeat-x;
 }
 
-
 #vis-data {
     background-image: url(../img/bg.png);
     background-repeat: repeat-x;
@@ -176,7 +175,7 @@ body {
     margin: 0px 0;
     border: 0px solid #eee;
     background-position: left;
-/ / border-left-width : 0 px;
+/ / border-left-width: 0 px;
     text-align: left;
 }
 

@@ -18,10 +18,10 @@ a:hover {
 }
 
 /*a[href^="http"] {*/
-    /*padding-right: 14px;*/
-    /*background-image: url('../images/external.png');*/
-    /*background-position: right !important;*/
-    /*background-repeat: no-repeat;*/
+/*padding-right: 14px;*/
+/*background-image: url('../images/external.png');*/
+/*background-position: right !important;*/
+/*background-repeat: no-repeat;*/
 
 /*}*/
 
@@ -72,11 +72,10 @@ a:hover {
     /*color: #0072C6;*/
 }
 
-
 #github {
     float: right;
     /*margin-top: 8px;*/
-    text-decoration:underline;
+    text-decoration: underline;
     margin-top: 14px;
     font-family: 'Josefin Slab', Helvetica, Arial, sans-serif;
     font-size: 1.5em;
@@ -87,11 +86,10 @@ a:hover {
     color: #0072C6;
 }
 
-
 #intro {
     float: right;
     /*margin-top: 8px;*/
-    text-decoration:underline;
+    text-decoration: underline;
     margin-top: 14px;
     font-family: 'Josefin Slab', Helvetica, Arial, sans-serif;
     font-size: 1.5em;

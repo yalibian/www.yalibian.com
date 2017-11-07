@@ -9,11 +9,11 @@ function Article(id, title, authors, abstract, categories, keywords, date) {
 }
 
 /**
- * Method to wrap a article json object. 
+ * Method to wrap a article json object.
  * @param article
  * @returns
  */
-Article.prototype.wrap = function(article) {
+Article.prototype.wrap = function (article) {
 	this.id = article.id;
 	this.title = article.title;
 	this.author = article.authors;

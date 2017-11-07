@@ -292,11 +292,11 @@ h6 {
 }
 
 .byl-pic .pic {
-    width: 320px;
-    height: 320px;
+    width: 220px;
+    height: 250px;
     z-index: 1;
     background-color: black;
-    background-image: url(../img/bczm.png);
+    background-image: url(../img/Avatar.jpg);
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;

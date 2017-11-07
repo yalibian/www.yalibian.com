@@ -4,7 +4,7 @@ function Period(date, wordlist, weight) {
 	this.weight = weight;
 }
 
-Period.prototype.wrap = function(period) {
+Period.prototype.wrap = function (period) {
 	//console.log("In Period wrap");
 	//console.log(period);
 	//console.log(period['date']);

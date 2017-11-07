@@ -4,10 +4,10 @@
 
 
 function popUpload_1() {
-    console.log("pop upload div");
-
-    $("#upload-vis-file-1").hide();
-
-
+	console.log("pop upload div");
+	
+	$("#upload-vis-file-1").hide();
+	
+	
 }
 

@@ -1,7 +1,7 @@
 #mainBubble {
     background: #fff;
     border: solid 1px #ddd;
-    box-shadow: 0 0 4px rgba(0,0,0,0);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0);
     font: 10px sans-serif;
     height: 300px;
     position: relative;
@@ -22,7 +22,7 @@
 
 #bubbleItemNode {
     font: 12px sans-serif;
-    position:center;
+    position: center;
 }
 
 
