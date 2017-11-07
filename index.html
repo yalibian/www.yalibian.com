@@ -14,7 +14,8 @@
     <script type="text/javascript" src="js/d3.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/jquery.min.js" charset="utf-8"></script>
 
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-social.css">
@@ -38,14 +39,14 @@
                     <br/>
 
                     <div class="row">
-                        <div class="span8">
+                        <div class="col-8">
                             <p> I am a Ph.D. student in Computer Science, at <a href="http://www.vt.edu.">Virginia
                                 Tech</a>, working with <a href="http://people.cs.vt.edu/~north/">Dr. Chris North</a> at
                                 <a
                                         href="http://infovis.cs.vt.edu">InfoVis Lab</a> on designing a system that
                                 enables successful collaborations between human and machine learning.
                             </p>
-                            <p > <em  style="background-color: #7fc97f">Human Computer Interaction</em>,
+                            <p><em style="background-color: #7fc97f">HCI</em>,
                                 <em style="background-color: #beaed4">Visual Analytics</em>,
                                 <em style="background-color: #fdc086">Machine Learning</em>,
                                 <em style="background-color: #ffff99">Machine Teaching</em></p>
@@ -57,10 +58,11 @@
                         <div>
                             <small style="margin-right: 4px">
                                 <span><i class="fa fa-envelope-o " aria-hidden="true"></i></span>
-                                <span class="value"><a href="mailto:yali.bian@hotmail.com">Yali.Bian@hotmail.com</a></span>
+                                <span class="value"><a
+                                        href="mailto:yali.bian@hotmail.com">Yali.Bian@hotmail.com</a></span>
                             </small>
 
-                                <small style="margin-right: 4px">
+                            <small style="margin-right: 4px">
                                 <span><i class="fa fa-github" aria-hidden="true"></i></span>
                                 <span class="value"><a href="http://github.com/yalibian">yalibian</a></span>
                             </small>
@@ -71,7 +73,7 @@
                             </small>
 
 
-                             <small style="margin-left: 36px">
+                            <small style="margin-left: 36px">
                                 <span><i class="fa fa-file-pdf-o " aria-hidden="true"></i></span>
                                 <span class="value"><a href="data/YaliBian_CV.pdf">CV</a></span>
                             </small>
@@ -90,61 +92,61 @@
             <hr class="masthead-hr" id="projects">
             <h3>Research</h3>
 
-            <div class="row-fluid posts">
+            <!--<div class="row-fluid posts">-->
+            <div class="row">
 
-                <div class="post-item span4">
+                <div class="post-item col-sm-4">
                     <a href="./vis/topics/">
                         <div class="home-thumbs top">
                             <div class="img" style="background-image:url(./img/vis-topics.png)">
                             </div>
                         </div>
                     </a>
-                    <h4>
+                    <h6>
                         <a href="./vis/topics/">Vis-Topics</a>
                         &nbsp;
                         <small><a href="http://www.github.com/bianyali/vis-topics">Github</a></small>
                         &nbsp;
                         <small><a href="./data/vis-topics.mov">Vedio</a></small>
-                    </h4>
+                    </h6>
                     <div class="description" style="font-style: italic">Visualization of Topics Derived from Collection
                         of Papers by Topic Model
                     </div>
                 </div>
 
-
-                <div class="post-item span4">
+                <div class="post-item col-sm-4">
                     <a href="./vis/lifestory/index.html">
                         <div class="home-thumbs top">
                             <div class="img" style="background-image:url(./img/vis-biography.png)">
                             </div>
                         </div>
                     </a>
-                    <h4>
+                    <h6>
                         <a href="vis/lifestory/index.html">Vis-LifeStory</a>
                         &nbsp;
                         <small><a href="http://www.github.com/bianyali/vis-lifestory">Github</a></small>
                         &nbsp;
                         <small><a href="./data/vis-lifestory.mov">Vedio</a></small>
-                    </h4>
+                    </h6>
                     <div class="description" style="font-style: italic">display the life story of someone, which
                         includes: his/her honors, works etc.
                     </div>
                 </div>
 
-                <div class="post-item span4">
+                <div class="post-item col-sm-4">
                     <a href="./vis/karma/">
                         <div class="home-thumbs top">
                             <div class="img" style="background-image:url(./img/vis-karma.png)">
                             </div>
                         </div>
                     </a>
-                    <h4>
+                    <h6>
                         <a href="./vis/karma">Vis-Karma</a>
                         &nbsp;
                         <small><a href="http://www.github.com/bianyali/vis-karma">Github</a></small>
                         &nbsp;
                         <small><a href="./data/vis-karma.mov">Vedio</a></small>
-                    </h4>
+                    </h6>
                     <div class="description" style="font-style: italic">
                         A cause-effect relation visual analytics: display, insert, edit, delete relations between causes
                         and effects.
@@ -152,16 +154,47 @@
                 </div>
 
 
-
             </div>
+
+
+            <!--******************************************************************-->
+            <hr class="masthead-hr">
+            <h3>Publications</h3>
+
+            <div class="row">
+            <ul class="list-unstyled" style="margin-left: 15px; margin-right: 15px;">
+                <li class="media">
+                    <img class="d-flex mr-3" src="..." alt="Generic placeholder image">
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-1">List-based media object</h5>
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                    </div>
+                </li>
+                <li class="media my-4">
+                    <img class="d-flex mr-3" src="..." alt="Generic placeholder image">
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-1">List-based media object</h5>
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                    </div>
+                </li>
+                <li class="media">
+                    <img class="d-flex mr-3" src="..." alt="Generic placeholder image">
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-1">List-based media object</h5>
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                    </div>
+                </li>
+            </ul>
+            </div>
+
 
             <!--******************************************************************-->
             <hr class="masthead-hr">
             <h3>Projects</h3>
 
-            <div class="row-fluid posts">
+            <div class="row">
 
-<div class="post-item span4">
+                <div class="post-item col-sm-4">
                     <a href="./vis/topics/">
                         <div class="home-thumbs top">
                             <div class="img" style="background-image:url(./img/vis-topics.png)">
@@ -181,7 +214,7 @@
                 </div>
 
 
-                <div class="post-item span4">
+                <div class="post-item col-sm-4">
                     <a href="./vis/lifestory/index.html">
                         <div class="home-thumbs top">
                             <div class="img" style="background-image:url(./img/vis-biography.png)">
@@ -200,7 +233,7 @@
                     </div>
                 </div>
 
-                <div class="post-item span4">
+                <div class="post-item col-sm-4">
                     <a href="./vis/karma/">
                         <div class="home-thumbs top">
                             <div class="img" style="background-image:url(./img/vis-karma.png)">
@@ -221,9 +254,7 @@
                 </div>
 
 
-
-
-                <div class="post-item span4">
+                <div class="post-item col-sm-4">
                     <a href="./vis/ThreeKingdoms/">
                         <div class="home-thumbs top">
                             <div class="img" style="background-image:url(./img/vis-threekingdoms.png)">
@@ -252,8 +283,9 @@
             <div class="modal-footer">
                 <!--Thanks to: <a href="http://kanitw.github.io/">Kanitw</a>(The main view)-->
             </div>
-        </div>
+        </dhiv>
     </div>
+</div>
 </div>
 
 </body>

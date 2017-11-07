@@ -1,0 +1,90 @@
+.mainnav .nav-item {
+  text-transform: capitalize;
+}
+
+.example {
+  position: relative;
+  padding: .614em;
+  border: 1px solid #ddd;
+  zoom: 1;
+}
+
+.example:before {
+  display: table;
+  margin-bottom: .614em;
+  content: "example";
+}
+
+.example:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.visibilityexample .g-fill-cell {
+  background: #eee;
+}
+
+.visibilityexample .g-fill-cell div {
+  width: 100%!important;
+  height: 100%!important;
+  background: rgba(0, 0, 0, .2);
+  position: absolute!important;
+}
+
+.code, .template {
+  padding: .614em 0;
+  border: 1px solid #ddd;
+  border-top: none;
+  background: #eee;
+  cursor: pointer;
+}
+
+.code:before, .template:before {
+  margin: 0 0 0 .614em;
+}
+
+.code:before {
+  content: "code \2026";
+}
+
+.template:before {
+  content: "template \2026";
+}
+
+.code.expanded:before {
+  content: "code";
+}
+
+.template.expanded:before {
+  content: "template";
+}
+
+.code pre, .template pre {
+  display: none;
+  margin: 0;
+  border: none;
+  cursor: text;
+}
+
+.example:before, .code:before, .template:before {
+  display: block;
+  color: #aaa;
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+@media print {
+  .code, .template {
+    page-break-inside: avoid;
+  }
+  .code pre, .template pre {
+    display: block;
+  }
+  .code:before {
+    content: "code";
+  }
+  .template:before {
+    content: "template";
+  }
+}
