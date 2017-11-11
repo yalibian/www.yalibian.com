@@ -163,7 +163,7 @@ a.ham {
     zoom: 1;
     *display: inline;
     min-height: 280px;
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
 }
 
 .post-item .home-thumbs {
