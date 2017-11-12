@@ -286,6 +286,14 @@ h6 {
     padding: 5px;
 }
 
+.yali-links {
+    position: absolute;
+    top: 290px;
+    right: 55px;
+    padding: 5px;
+}
+
+
 .byl-pic .pic {
     width: 220px;
     height: 250px;
