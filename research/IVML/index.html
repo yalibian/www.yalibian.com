@@ -1,65 +1,278 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <title>IVML: Interactive Visual Machine Learning</title>
-
+    <meta charset="UTF-8">
+    <title>Report</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link type="text/css" rel="stylesheet" href="css/font-awesome.css"/>
     <link type="text/css" rel="stylesheet" href="css/main.css"/>
-    <link type="text/css" rel="stylesheet" href="css/vis.css"/>
-    <!--<link type="text/css" rel="stylesheet" href="css/workspace.css"/>-->
-    <link type="text/css" rel="stylesheet" href="css/docs.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="lib/d3.min.js"></script>
-    <script type="text/javascript" src="lib/d3-selection-multi.js"></script>
+    <!--<link type="text/css" rel="stylesheet" href="css/style.css"/>-->
+
 </head>
 
-<body style="height: 100vh; width:100vw">
+<body>
+<div class="container" id="main-view">
+    <div class="content" id="content" role="main">
 
-<div id="header"
-     style="min-height:35px;height:2%;background-color:#074563;color:white;overflow:hidden;position:relative;">
-    <div style="margin:0;height:30px;display:inline-block;width:500px;position:absolute;margin-right:10px;">
-        <h1 style="margin:0;height:60px;padding:5px;font-size:20px;">
-            <span style="font-weight:normal;">IVML: Interactive Visual Machine Learning</span>
-        </h1>
+
+        <br />
+        <br />
+        <h2 id="visml-interactive-visualization-for-machine-learning" class="text-center">Interactive Visual Machine Learning</h2>
+        <!--<h3 id="motivations">MOTIVATIONS</h3>-->
+        <p>Our main idea is to explore how visualization with interactions [1] could improve the efficiency of
+            communications between human and machine learning: how could interactive visualization could help users
+            create machine learning algorithms effectively and efficiently. Finding and exploring items with characters
+            that hard to express in keywords is still a hard problem. 'Interactive concept learning’ is an excellent
+            solution that provides personalized recommendations based on concepts learned through users' selected
+            examples interactively. However, it could still be time-consuming if labeling elements itself is a hard
+            task, since only with enough numbers of labels could the machine learning generate a good concept learner.
+            In the era of big data, finding and recommending the most interest and valuable subset from large
+            collections is a hot research topic and has been explored a lot as the distance metrics problem: recommendation systems,
+            information retrieval, and so on. When talking about finding and recommending the customized, on-demand
+            group of abstract elements/ that is hard for users to express or describe through natural language, current
+            research techniques are too clumsy to solve it.</p>
+
+          <div class="text-center"><iframe src="http://www.youtube.com/embed/EZhBt_fXwQM" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+          </div>
+
+        <h5 class="text-center">Click <a href="http://52.21.145.86:8080/">here</a> to go to the real demo.</h5>
+        <!--Please check the <a href="http://52.21.145.86:8080/">demo</a>-->
+
+
+        <h3 id="related-works">RELATED WORKS</h3>
+        <p>Before our own design, we have explored the topic through both HCI and machine learning fields, and make a
+            list of comparison of current research in HCI and Machine Learning.</p>
+        <h4 id="1-machine-learning">1. Machine Learning:</h4>
+        <p>The topic of effective machine learning creation has been explored in different perspectives in the machine
+            learning fields: Active learning [2] tries to using less but the most valuable labels that provides the
+            greatest information gain, evaluating effectiveness and efficiency as the numbers of examples users should
+            label. Machine teaching [3] is an optimization problem over teaching examples that balance the future loss
+            of the learner (machine learning algorithm) and the effort of the teacher. Interactive machine learning [4]
+            tries to improve human teacher by giving teachings guidance, when human training an agent to perform a
+            classification task by showing examples. The interactive machine learning also tries to improve the
+            effectiveness of classifier creation through the efficiency of labeling. The guidance for users could
+            improve the labeling efficiency based on provides users more information, the context about labeling could
+            let users labeling quickly than labeling less examples without any context.<br>
+            Since current research on interactive machine learning are mainly works on how to provides users guides
+            based on different presentation techniques based on ranking or neighbors. For our project, we plan to
+            provides more context through visualization and let users labeling and explore dataset interactively.</p>
+        <h4 id="2-visual-analytics">2. Visual Analytics:</h4>
+        <p>Visual analytics [5] aims at providing visual platforms for users to interact directly with data and models
+            through combining the power of automated data analysis and mining. Visual analytics researchers mainly
+            explore the topic through how to make users effectively expressing their knowledge and preferences visually
+            and interactively to data mining or machine learning methods. The visual classifier training model [6]
+            presents an approach for building classifiers interactively and visually: how classifiers can be trained in
+            a visual and interactive manner to improve recall and generalization for searching and filtering tasks in
+            visual analytics scenarios. The Visual Classifier Training model mainly works on how to build classifiers
+            interactively and visually in order to complement classical supervised machine learning techniques.</p>
+        <p>Our project is also about creating a visual classifier training model, but providing more guidance based on
+            interactive machine learning instead of active learning. We will also try to explore how different
+            visualization layout could affect the labeling effect.</p>
+        <h3 id="progress">PROGRESS</h3>
+        <p>We got our idea of interactive machine learning powered with interactive visualization based on the
+            combination of the visual classifier training model and Effective End-user Interaction with Machine Learning
+            [7]. How could we interact with supervised machine learning in an observation level effectively - letting
+            users explore big dataset and label items, sense-make current machine learning state in on visualization
+            workspace. Instead of using several different visualization views to present the quality of the classifier,
+            the status of the classifiers, the contents of the labels, we create only one visualization view (workspace)
+            to let users explore the dataset and express their preference, and also let classifier re-layout the view to
+            express the status, the quality of the classifiers.</p>
+        <h4 id="1-semantic-interaction">1. Semantic Interaction</h4>
+        <p>To let users express their knowledge and preference even without any prefessonal knowledge on machine
+            learning, and at the same time, mapping users' interactions (that expressing knowledge and preference) into
+            inputs to tranings clasisifers, we mappings users interactions to control machine learnings models through
+            semantic models, in a different way. However, different from traditional semantic interactions, we use
+            semantic interactions for classifiers: that mappings the X axis into the certainty of samples that belong to
+            each part. At the same time, the trained classifier could also be mapped to visualization to show the
+            confidence on the X axis.</p>
+        <!--<div class="text-center"><img class="rounded" src="img/SemanticInteraction.png" alt="Semantic Interaction for Classification"></divc>-->
+        <figure data-type="image"><img src="img/SemanticInteraction.png" width=100%
+                                       alt="Semantic Interaction for Classification">
+            <figcaption class="text-center">Semantic Interaction for Classification</figcaption>
+        </figure>
+        <h4 id="2-interactive-machine-learning">2. Interactive Machine Learning</h4>
+        <p>Based on the framework of interactive machine learning, the most basic interactive machine learning
+            algorithms used in academic research is 'nearest-neighbor classifier' [9]: through re-rank samples with or
+            without specific features, which could present examples illustrating its current understanding of the
+            desired classifier and users use this presentation to decide how to further improve the system's
+            understanding. To make our IVML model simple for implementation and demonstration, like the framework of
+            interactive machine learning, we use the basic linear SVM from Scikit-Learn lib, of Python. Each time, the
+            model maps user's interactions into interactive machine learning part, we will update the linear SVM
+            again.</p>
+        <h4 id="3-interactive-visualization">3. Interactive Visualization</h4>
+        <p>For the basic visualization part, we will use the web-based version of StarSPIRE [10] that Yali Bian
+            developed to visualize the text documents based on ForceSPIRE [10]. However, more interactions will be added
+            to help users explore examples with context generated based on interactive machine learnings. As we talked
+            on semantic interaction part, certainty of samples should be labeled to X axis. Basic on this semantic
+            meaning of 2D screen, we resigned our visualization as follows:</p>
+        <figure data-type="image"><img src="img/Layout3.png" width=100%
+                                       alt="Visualization for Classification Powered with Semantic Interaction">
+            <figcaption class="text-center">Visualization for Classification Powered with Semantic Interaction
+            </figcaption>
+        </figure>
+        <p>The most basic and expressive interaction that users could use is dragging: user could drag samples to the
+            position that he/she think it should be: if the user is super confident about the samples that belongs to
+            the negative part, he/she could drag the sample to left that far away from the certor, the most uncertain
+            place, that most samples located at, at first. The distance from the centor could be directly mapped to the
+            confidence of the label that user makes. The left part with green background color means negative part for
+            samples, right part with red background color means the positive part. Samples at the center blur part means
+            users or classifier are not sure which part should the sample belong to.</p>
+        <p>There are other interactions for users to manage labels in a higher level:</p>
+        <ul>
+            <li>Update Layout: parse current layout and passings labels back to interactive machine learning part, and
+                update the layout based on trained classifier.
+            </li>
+            <li>Undo Layout: undo the last training, and update the layout based on last trained classifer.</li>
+            <li>Reset Layout: clear all the labels for the interactive machine learning part, and update the layout
+                based on classifier with 0 labels.
+            </li>
+            <li>Undo Label: un-label the last dragged sample.</li>
+            <li>Redo Label: re-label the last un-labeld sample.</li>
+        </ul>
+        <h3 id="case-study">Case Study</h3>
+        <p>To test the effectiveness and effencity of our model, we perform an case study based on animial dataset on
+            classification between herbivore and carnivores. The results show that even without any knowledge about
+            machine learings, commom users still could training a great classifier for personal usage.</p>
+        <h4 id="animal-dataset">Animal Dataset</h4>
+        <p>We choose to use the animal dataset for two reasons:</p>
+        <ul>
+            <li>The dataset of animals could be easily understand by users through only animal names.</li>
+            <li>The dataset of animals could be explored in different groups.(Prey and predator, land/water types,
+                etc)
+            </li>
+            <li>The dataset (50*86) is really small set (50 animals) but with enough features (86), which is easy to
+                visualize and explore for users, at the same, proviving enough features to do an accurate
+                classification.
+            </li>
+        </ul>
+        <h4 id="first-layout-and-first-interaction">First Layout and First Interaction</h4>
+        <p>At first, since there is no labels to trainer the classifer, so all the samples located at the center
+            part.</p>
+        <figure data-type="image"><img src="img/layout1.png" width=100% alt="Orignial Layout without Labels">
+            <figcaption class="text-center">Orignial Layout without Labels</figcaption>
+        </figure>
+        <p>When the user tries to classify two types of animals: herbivores, carnivores. The user first, drag three
+            obvious herbivorious animals into the left part, that far away from center, and three obvious carnivorious
+            animals to the right far away from center.</p>
+        <figure data-type="image"><img src="img/Drag1.png" width="100%"
+                                       alt="Layout of Draging Three Animals to Left and Three to Right">
+            <figcaption class="text-center">Layout of Draging Three Animals to Left and Three to Right</figcaption>
+        </figure>
+        <p>Then the user click the Update-Layout button, to train the classifier using those six samples. Then the
+            visualization updated based on new updted classifier.</p>
+        <figure data-type="image"><img src="img/Layout2.png" width="100%"
+                                       alt="Updated Layout based on New Classifier with Six Labels">
+            <figcaption class="text-center">Updated Layout based on New Classifier with Six Labels</figcaption>
+        </figure>
+        <p>Current layout of visualization shows current status of the updated classifer， half of the animals has been
+            successfully classified into two sides. There are still half animals like dolphin and killer whale, etc. The
+            user just drag more other samples to two sides and update the layout again.</p>
+        <figure data-type="image"><img src="img/Layout3.png" width="100%"
+                                       alt="Updated Layout based on New Classifier with Six Labels">
+            <figcaption class="text-center">Updated Layout based on New Classifier with Eleven Labels</figcaption>
+        </figure>
+
+        <p>After the second training, the new updated visualization based on current classifier, shows only three
+            unconfident samples located at the certer.</p>
+        <p>Based on those interactions, human in the loop, we proved that users without any knowledge about machine
+            learning, could still train a clasifier easily an quikcly.</p>
+        <h3 id="evaluations">Evaluations</h3>
+        <p>To evaluation the underlying interactive machine learning model, we design an interacitve machine learning
+            model with mimic interactions from users. Each time, users could label only two examples, one from the
+            negative part, and one from the positive part. Then using other unseleted samples as test set, and calculate
+            the f1 score and plot out the status. We trained classfiers to evaluate the underlying model: domestic and
+            wild animals, animals with horns or not, prey and predator, animals lives in water or land.</p>
+        <p>Basted on the four f1-score line chart, we could find non-expert users on machine learning could successfully
+            train classification models for their own usage</p>
+        <figure data-type="image"><img src="img/domestic_wild.png" width="100%"
+                                       alt="Classification of Domestic and Wild Animals">
+            <figcaption class="text-center">Classification of Domestic and Wild Animals</figcaption>
+        </figure>
+        <figure data-type="image"><img src="img/horn_not.png" width="100%"
+                                       alt="Classification of animals have horns or not">
+            <figcaption class="text-center">Classification of animals have horns or not</figcaption>
+        </figure>
+        <figure data-type="image"><img src="img/prey_predator.png" width="100%"
+                                       alt="Classification of Prey and Predator">
+            <figcaption class="text-center">Classification of Prey and Predator</figcaption>
+        </figure>
+        <figure data-type="image"><img src="img/water_land.png" width="100%" alt="water_land">
+            <figcaption class="text-center">Classification of animals live in water and land</figcaption>
+        </figure>
+        <!--<h3 id="timeline">TIMELINE</h3>-->
+        <!--<p>Since we tried to combined works from both HCI and Machine Learning fields, most works located in those two-->
+        <!--fileds and the combination of both HCI and Machine Learning.</p>-->
+        <!--<table>-->
+        <!--<thead>-->
+        <!--<tr>-->
+        <!--<th>Time</th>-->
+        <!--<th>Yali Bian</th>-->
+        <!--<th>Liyan Li</th>-->
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody>-->
+        <!--<tr>-->
+        <!--<td>10/18/17</td>-->
+        <!--<td>Idea and related works</td>-->
+        <!--<td>Idea and related works</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td>11/01/17</td>-->
+        <!--<td>Related Works and related visualization</td>-->
+        <!--<td>Dataset to use on our idea</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td>11/15/17</td>-->
+        <!--<td>Basic Visualization design</td>-->
+        <!--<td>Scikit-Learn Algorithm</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td>11/28/17</td>-->
+        <!--<td>Visualization Framework</td>-->
+        <!--<td>Linear SVM implementation on dataset</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td>12/07/17</td>-->
+        <!--<td>Merge Visualization and Machine Learning into Framework.   </td>-->
+        <!--<td>Merge Machine Learning to the framework</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td>12/11/17</td>-->
+        <!--<td>Evaluation and case study</td>-->
+        <!--<td>Evaluation and case study</td>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+        <!--</table>-->
+
+
+        <h3 id="references">REFERENCES</h3>
+        <ol>
+            <li>J.J. Thomas and K.A. Cook, eds., Illuminat- ing the Path: The Research and Development Agenda for Visual
+                Analytics, Nat'l Visualization and Analytics Center, 2005.
+            </li>
+            <li>B. Settles, Active Learning, Morgan &amp; Claypool, 2012.</li>
+            <li>Simard P Y, Amershi S, Chickering D M, et al. Machine Teaching: A New Paradigm for Building Machine
+                Learning Systems[J]. arXiv preprint arXiv:1707.06742, 2017.
+            </li>
+            <li>Fails, J.A., Olsen Jr., D.R. Interactive Machine Learning. IUI 2003, 39-45.</li>
+            <li>J.J. Thomas and K.A. Cook, eds., Illuminat- ing the Path: The Research and Development Agenda for Visual
+                Analytics, Nat'l Visualization and Analytics Center, 2005.
+            </li>
+            <li>Heimerl F, Koch S, Bosch H, et al. Visual classifier training for text document retrieval[J]. IEEE
+                Transactions on Visualization and Computer Graphics, 2012, 18(12): 2839-2848.
+            </li>
+            <li>Amershi S. Designing for effective end-user interaction with machine learning[C]//Proceedings of the
+                24th annual ACM symposium adjunct on User interface software and technology. ACM, 2011: 47-50.
+            </li>
+            <li><a href="http://qwone.com/~jason/20Newsgroups/">http://qwone.com/~jason/20Newsgroups/</a></li>
+            <li>Cover T, Hart P. Nearest neighbor pattern classification[J]. IEEE transactions on information theory,
+                1967, 13(1): 21-27.
+            </li>
+            <li>Bradel L, North C, House L. Multi-model semantic interaction for text analytics[C] Visual Analytics
+                Science and Technology (VAST), 2014 IEEE Conference on. IEEE, 2014: 163-172.
+            </li>
+        </ol>
     </div>
-
-    <a style="float: right; display: inline-block;" href="https://github.com/yalibian/CrowdSPIRE"><i
-            class="fa fa-fw fa-github text-white fa-2x"></i></a>
-    <a style="float: right; display: inline-block;" href="http://www.yalibian.com"><i
-            class="fa fa-fw fa-home text-white fa-2x"></i></a>
-
 </div>
-
-<div id="main" style="position:relative;display:flex;align-self:stretch;flex-grow:1;height:100%;">
-    <div
-            style="flex-direction:column;position:relative;display:flex;align-self:stretch;flex-grow:1;
-             min-height: 500px;height:
-             100%;
-             width:75%">
-
-        <h1 id="vis-bar"
-            style="font-weight:normal;color:#CCC;padding:5px;font-size:16px;margin:0;border-bottom:solid 1px #ccc;">
-            WorkSpace
-            <a style="display: inline-block;" href="javascript:updateLayout();"><i class="fa fa-fw fa-refresh"></i>Update-Layout</a>
-            <a style="display: inline-block;" href="javascript:undoLayout();"><i class="fa fa-fw fa-refresh"></i>Undo-Layout</a>
-            <a style="display: inline-block;" href="javascript:resetLayout();"><i class="fa fa-fw fa-recycle"></i>Reset-Layout</a>
-            <a style="display: inline-block;" href="javascript:undoInstance();"><i class="fa fa-fw fa-undo"></i>Undo-Label</a>
-            <a style="display: inline-block;" href="javascript:redoInstance();"><i class="fa fa-fw fa-repeat"></i>Redo-Label</a>
-        </h1>
-        <svg id="workspace" style="display: flex; min-height: 180px; height: 100%">
-
-
-        </svg>
-    </div>
-</div>
-
 </body>
-<script type="text/javascript" src="scripts/utility.js"></script>
-<!--<script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>-->
-<!--<script type="text/javascript" src="scripts/model.js"></script>-->
-<script type="text/javascript" src="scripts/main.js"></script>
 </html>
-
-
