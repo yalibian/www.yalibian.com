@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>IVML: Interactive Visual Machine Learning</title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.css"/>
+    <link type="text/css" rel="stylesheet" href="css/main.css"/>
+    <link type="text/css" rel="stylesheet" href="css/vis.css"/>
+    <!--<link type="text/css" rel="stylesheet" href="css/workspace.css"/>-->
+    <link type="text/css" rel="stylesheet" href="css/docs.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/d3.min.js"></script>
+    <script type="text/javascript" src="lib/d3-selection-multi.js"></script>
+</head>
+
+<body style="height: 100vh; width:100vw">
+
+<div id="header"
+     style="min-height:35px;height:2%;background-color:#074563;color:white;overflow:hidden;position:relative;">
+    <div style="margin:0;height:30px;display:inline-block;width:500px;position:absolute;margin-right:10px;">
+        <h1 style="margin:0;height:60px;padding:5px;font-size:20px;">
+            <span style="font-weight:normal;">IVML: Interactive Visual Machine Learning</span>
+        </h1>
+    </div>
+
+    <a style="float: right; display: inline-block;" href="https://github.com/yalibian/CrowdSPIRE"><i
+            class="fa fa-fw fa-github text-white fa-2x"></i></a>
+    <a style="float: right; display: inline-block;" href="http://www.yalibian.com"><i
+            class="fa fa-fw fa-home text-white fa-2x"></i></a>
+
+</div>
+
+<div id="main" style="position:relative;display:flex;align-self:stretch;flex-grow:1;height:100%;">
+    <div
+            style="flex-direction:column;position:relative;display:flex;align-self:stretch;flex-grow:1;
+             min-height: 500px;height:
+             100%;
+             width:75%">
+
+        <h1 id="vis-bar"
+            style="font-weight:normal;color:#CCC;padding:5px;font-size:16px;margin:0;border-bottom:solid 1px #ccc;">
+            WorkSpace
+            <a style="display: inline-block;" href="javascript:updateLayout();"><i class="fa fa-fw fa-refresh"></i>Update-Layout</a>
+            <a style="display: inline-block;" href="javascript:undoLayout();"><i class="fa fa-fw fa-refresh"></i>Undo-Layout</a>
+            <a style="display: inline-block;" href="javascript:resetLayout();"><i class="fa fa-fw fa-recycle"></i>Reset-Layout</a>
+            <a style="display: inline-block;" href="javascript:undoInstance();"><i class="fa fa-fw fa-undo"></i>Undo-Label</a>
+            <a style="display: inline-block;" href="javascript:redoInstance();"><i class="fa fa-fw fa-repeat"></i>Redo-Label</a>
+        </h1>
+        <svg id="workspace" style="display: flex; min-height: 180px; height: 100%">
+
+
+        </svg>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript" src="scripts/utility.js"></script>
+<!--<script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>-->
+<!--<script type="text/javascript" src="scripts/model.js"></script>-->
+<script type="text/javascript" src="scripts/main.js"></script>
+</html>
+
+
