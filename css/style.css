@@ -295,15 +295,16 @@ h6 {
 
 
 .byl-pic .pic {
-    width: 220px;
-    height: 250px;
+    width: 180px;
+    height: 220px;
     z-index: 1;
     background-color: black;
-    background-image: url(../img/Avatar.jpg);
+    background-image: url(../img/Avatar-1.jpeg);
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
-    margin-right: 30px;
+    margin-left: 30px;
+    /*margin-right: 30px;*/
     border-radius: 8px !important;
 }
 
